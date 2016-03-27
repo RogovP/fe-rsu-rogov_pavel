@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>task 2 </title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <form action="http://httpbin.org/post" method="post" id="form1">
+    <fieldset>
+      <legend>Personal data</legend>
+      First name<br>
+      <input type="text" name="firstname" autofocus>
+      <br>
+      Surname<br>
+      <input type="text" name="surname">
+      <br><br>
+     Sex <input type="radio" name="sex" value="male" checked>Male
+  
+    <input type="radio" name="sex" value="female">Female
+    </fieldset>
+    
+        <fieldset>
+      <legend>Contact information:</legend>
+      Site<br>
+      <input type="text" name="site">
+      <br>
+      E-mail<br>
+      <input type="email" name="mail">
+      <br>
+	  Phone<br>
+      <input type="text" name="phone">
+      <br><br>
+	  
+    </fieldset>
+  </form>
+	  <br>
+	  <input type="submit" value="Отправить GET" form="form1">
+  <br>
+  
+</body>
+</html>
