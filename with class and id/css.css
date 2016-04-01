@@ -1,0 +1,38 @@
+html{
+background: white;
+}
+body{
+background: lightblue;
+}
+
+#ex , .first{
+background-color: rgba(135, 55, 23, 100);
+color: grey;
+margin: 100px;
+padding: 200px;
+font-size: 40px;
+text-align: center;
+text-decoration: underline;
+word-spacing: 50px;
+}
+.font{
+font-variant: small-caps;
+font-size: 30px;
+color: green;
+text-decoration: line-through;
+}
+.fs{
+font-style: italic;
+font-size: 35px;
+font-weight: 700;
+text-transform: uppercase;
+line-height: 80px;
+}
+.some_text
+{
+background-color: rgba(5, 255, 23, 1)}
+.task{
+letter-spacing: 80px; 
+text-align: center; 
+text-shadow: 0 0 50px red, 0 0 40px green; 
+}
