@@ -1,0 +1,18 @@
+
+
+table tr:nth-child(2n + 1) {
+  background: lightblue; 
+} 
+table tr:nth-child(2n) {
+  background: grey; 
+} 
+
+
+
+table  tr:hover {
+  background: gold;
+  cursor: pointer;
+}
+table tr:nth-child(1){
+background: lightblue; 
+}

@@ -1,0 +1,26 @@
+1:plate
+2:bento
+3:#fancy
+4:plate apple
+5:#fancy pickle
+6:.small
+7:bento .small,plate .small
+8:bento orange
+9:plate,bento,plate
+10:*
+11:plate *
+12:plate+.small,plate+apple
+13:bento~pickle
+14:plate>apple
+15:orange:first-child
+16:plate apple:only-child, plate pickle:only-child
+17:#fancy .small,pickle:last-child
+18:plate:nth-child(3)
+19:bento:nth-child(2)
+20:apple:nth-child(1)
+21:plate:nth-child(even)
+22:plate:nth-child(3),plate:nth-child(5)
+23:plate:nth-child(2) .small
+24:.small:last-of-type
+25:bento:empty
+26:apple:not(.small)
