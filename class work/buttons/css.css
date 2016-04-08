@@ -1,0 +1,56 @@
+body{
+baclground-color:#ffffff;
+}
+
+.one,.two,.tree,.four,.five,.six,.seven,.eight,.nine {
+font-size: 30px;
+width: 130px;
+height: 100px;
+background: #3498db;
+transition: all 0.5s;
+border: 5px white solid;
+margin: 10px 5px 5px 5px;
+text-align: center;
+color: white;
+}
+.five:hover{
+transform: rotate(90deg);
+}
+.two:hover{
+opacity: 0;
+}
+.one:hover{  
+background-color: white;
+color: #3498db;
+}
+.tree:hover{
+color: white;
+opacity: 0;
+transform: scale(2, 2);
+}
+.four:hover{
+border-left: 20px solid white;
+width: 100px;
+height: 60px; 
+}
+.nine:hover{
+ transform: skew(45deg, 45deg);
+}
+.eight:hover{
+transform: scale(1.5, 0.0);
+}
+.seven:hover{
+transform: scale(0.0, 0.0);
+}
+.six:hover{
+height: 0px;
+}
+.text {
+padding-left: 5px;
+}
+.text_ft {
+padding-left: 5px;
+}
+.text_ft:hover {
+margin-top: 10px;
+}

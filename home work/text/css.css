@@ -1,0 +1,11 @@
+.text {
+background: grey;
+}
+
+@media screen and (max-width: 500px){
+
+.text{
+background: green;
+}
+
+}

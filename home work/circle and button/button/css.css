@@ -1,0 +1,37 @@
+
+.five{
+margin-top: 1px;
+margin-left: 1px;
+position: absolute;
+width: 160px;
+height: 39px;
+color: white;
+border-radius: 10px;
+background: linear-gradient(to top, #7593df, #585fe7, #7593df);
+
+}
+.four {
+width: 162px; 
+height: 41px;
+background: white;
+border-radius: 10px;
+border: 2px solid #7593df;
+margin-left: 0.5px;
+margin-top: 0.5px;
+}
+.inv {
+position: absolute;
+color: #c8f1f4;
+margin-left: 55px;
+margin-top: 10px;
+font-size: 20px;
+text-align: center;
+}
+.tree {
+background: white;
+border-radius: 10px;
+border: 1px solid #b0ecf2;
+box-shadow:  0 0 40px #95d5db;
+width: 168px; 
+height: 46px;
+}
