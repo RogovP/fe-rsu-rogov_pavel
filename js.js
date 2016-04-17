@@ -1,0 +1,63 @@
+var one='13213';
+var two='223131';
+console.log(one);
+console.log(two);
+ function toFync(h, b) {
+  return h * b /2;
+ }
+
+console.log(toFync(1, 4));
+  var arr=[1,2,3,4];
+function revers(arr) {
+    var length = arr.length - 1;
+    var i = 0, temp;
+    while (i < length - i) {
+        temp = arr[i];
+        arr[i] = arr[length - i];
+        arr[length - i] = temp;
+        i++;
+    }
+    return arr;
+}
+console.log(revers(arr));
+
+  var arr=[1,2,3,4];
+function revers_2(arr) {
+    var length = arr.length - 1;
+    var temp;
+    for (var i = 0, iter = Math.floor(length / 2); i < iter; i++) {
+        temp = arr[i];
+        arr[i] = arr[length - i];
+        arr[length - i] = temp;
+    }
+    return arr;
+}
+
+console.log(revers(arr));
+
+//
+ var arr=[1,2,3,4];
+function revers(arr) {
+    var length = arr.length - 1;
+    var i = 0, temp;
+    do {
+        temp = arr[i];
+        arr[i] = arr[length - i];
+        arr[length - i] = temp;
+        i++;
+    }
+  while (i < length - i);
+    return arr;
+}
+console.log(revers(arr));
+
+// Операция i++ возвращает значение переменной i до выполнения. Операция ++i возвращает значение уже измененной переменной
+var q=1; 
+console.log(q++);//написав в консоле такое выражение ,в результате получится изначальное значание 'q' - 1 ,но для последующих операций оно будет увеличено на +1, т.е. ++
+var g=1;
+console.log(++g);//написав в консоле такое выражение ,в результате получится значание 'q' ,увеличенное на +1
+//var a = prompt("Number?");
+//var n=0;
+//if (a<0) alert('Это число отрицательное');
+//if (a==n) alert('Это число равно нулю');
+//if (a>0) alert('Это число положительное');
