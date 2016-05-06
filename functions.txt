@@ -1,0 +1,233 @@
+//1. Write a JavaScript program to display the current day and time in the following format.
+var now = new Date();
+if (now.getDay()===0) console.log('Today is Sunday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==1) console.log('Today is Monday '+  now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==2) console.log('Today is Tuesday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==3) console.log('Today is Wednesday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==4) console.log('Today is Thursday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==5) console.log('Today is Friday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+if (now.getDay()==6) console.log('Today is Saturday ' + now.getHours()+' : '+ now.getMinutes()+ ' : '+now.getSeconds());
+//2. Write a JavaScript program to get the current date.
+var now = new Date();
+console.log(now.toString());
+//3. Write a JavaScript program to find 1st January be a Sunday between 2014 and 2050.
+for (var year = 2014; year <= 2050; year++)  
+    {  
+    var d = new Date(year, 0, 1);  
+    if ( d.getDay() === 0 )  
+        console.log(year);  
+    }
+//4. Write a JavaScript program to calculate days left until next New Year.
+var two = new Date(2016, 11, 31);
+var g=(((((two-now)/1000)/60)/60)/24) +1;
+console.log(g);
+//5. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+arr = function(input) {  
+  if (toString.call(input) === "[object Array]")  
+    return true;  
+  return false;     
+    };  
+console.log(arr('w3resource'));  
+console.log(arr([1, 2, 4, 0])); 
+//6. Write a JavaScript function to clone an array
+function is_arr() {
+var arr = [1,2,3,4,5,2,1412,124];
+  var a = arr.slice(0);
+  console.log(a);
+  console.log(arr);
+}
+is_arr();
+//7. Write a JavaScript function to find the most frequent item of an array.
+var arr=[1,2,3,5,1,1,1,1];
+var map = {};
+var most = arr[0];
+function find(){
+    for(var i = 0; i<arr.length; i++){
+        if(!map[arr[i]]){
+            map[arr[i]]=1;
+        }else{
+            ++map[arr[i]];
+            if(map[arr[i]]>map[most]){
+                most = arr[i];
+            }
+        }
+    }
+    console.log(most);
+}
+find();
+//8. Write a JavaScript function that inverts the case of the letters of the given string and returns new string
+function up(){
+  var stroka="hi,friend!";
+  var new_str = stroka.toUpperCase();
+console.log(stroka);
+console.log(new_str);
+  
+}
+up();
+//9. Write a JavaScript program to remove duplicate strings from a string array (ignore case sensitivity)
+var a= [1,1,1,2,3,123,6,321,1,1,,1];
+a.sort();
+for (var i = a.length - 1; i > 0; i--) {
+    if (a[i] == a[i - 1]) a.splice( i, 1);
+}
+alert(a); 
+//10. Write a JavaScript program to shuffle an array
+var a = [1, 2, 3, 4, 5,6,7,8,9,10];
+
+function rand() {
+  return Math.random() - 0.5;
+}
+
+a.sort(rand);
+
+console.log(a);
+//11. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array
+function del(){
+var a= [1,undefined,null,"",0,6,false,1,1,0,NaN];
+for (var i = a.length - 1; i > 0; i--) {
+    if (a[i] === 0 || a[i]=== "" || a[i]== null || a[i]=== false || a[i]===undefined || isNaN(a[i])) a.splice( i, 1);
+}
+return a; }
+console.log (del());
+
+//12. Write a JavaScript function to sort the following array of objects by title value using СsortТ method
+function sort(id_1, id_2) {
+return id_1.libraryID - id_2.libraryID;}
+var Bill = { author: "Bill Gates", title: 'The Road Ahead', libraryID: 1254};
+var Steve = { author: "Steve Jobs", title: 'Walter Isaacson', libraryID: 4264};
+var Suze = { author: "Suzanne Collins", title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245};
+var a = [ Bill , Steve , Suze];   
+a.sort(sort);
+for(var i = 0; i < a.length; i++) {
+console.log(a[i].author);
+}
+//13. Write a JavaScript function to merge two arrays and removes all duplicates elements
+var arr1 = [1, 2, 3,3,3,3,3];  
+var arr2 = [2, 30, 1,3,3,3,3]; 
+function merge_array(arr1, arr2) {  
+    var result_array = [];  
+    var arr = arr1.concat(arr2);  
+    var len = arr.length;  
+    var arrem = {}; 
+    while(len--) {  
+        var item = arr[len];  
+        if(!arrem[item])   
+        {
+          result_array.unshift(item);  
+            arrem[item] = true;  
+        }  
+    } 
+    return result_array;  
+}  
+console.log(merge_array(arr1, arr2));
+//14. Write a JavaScript function to remove a specific element from an array
+function del_item (){
+  var d_item=3;
+var a= [1,2,3,1,12,43,1];
+  a.splice(d_item,1);
+  return a;
+}
+console.log(del_item());
+
+//15. Write a JavaScript function to get a random item from an array
+function rand_item(){
+var a = [1, 2, 3, 4, 5,6,7,8,9,10];
+var rand = Math.floor(Math.random() * a.length);
+console.log( a[rand] );
+}
+rand_item();
+//16. Write a JavaScript function to move an array element from one position to another
+function rand (){
+
+var a= [1,2,3,1,12,43,1];
+  var position_1=4;
+  var del_item= a.splice(position_1, 1);
+  var position_2=1;
+  a.splice(position_2, 0, del_item);
+  return a;
+}
+console.log(rand());
+
+//17. Write a JavaScript function to get difference between two dates in days
+function rand (){
+var d_1=new Date(2013,03,18);
+  var d_2 =new Date(2016,11,31);
+  var a= d_2 - d_1;
+ console.log(((((a)/1000)/60)/60)/24);
+}
+rand();
+//18. Write a JavaScript function to get the maximum date from an array of dates
+function max_date(all_dates) {  
+var max_dt = all_dates[0],  
+  max_dtObj = new Date(all_dates[0]);  
+all_dates.forEach(function(dt, index)  
+  {  
+  if ( new Date( dt ) > max_dtObj)  
+  {  
+  max_dt = dt;  
+  max_dtObj = new Date(dt);  
+  }  
+  });  
+ return max_dt;  
+  }  
+console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+//19. Write a JavaScript function to split a string and convert it into an array of words
+function mas(){
+var a = 'this some text';
+  console.log (a);
+  console.log( a.split(' ') );
+}
+mas();
+//20. Write a JavaScript function to capitalize the first letter of a string
+function mas_2(){
+var a = 'this some text';
+  console.log (a);
+console.log(a[0].toUpperCase()+ a.slice(1));
+}
+mas_2();
+//21. Write a JavaScript function to convert a string into camel case
+function camelize(str) {  
+      return str.replace(/\W+(.)/g, function(match, chr)  
+       {  
+            return chr.toUpperCase();  
+        });  
+    }
+console.log(camelize("Java Script"));
+console.log(camelize("java-script"));
+console.log(camelize("Java Script Exercises"));
+//22. Write a JavaScript function to find the highest value in an array
+function max(){
+var arr = [14, 25.2, 2, 10, 3];
+var maxValue = arr[0];
+for(var i=1; i <= arr.length-1; i++) {
+if(arr[i] > maxValue) maxValue = arr[i];
+}
+return maxValue;}
+console.log('Max item : ' + max());
+//23. Write a JavaScript function to find the lowest value in an array
+
+function min(){
+var arr = [14, 25.2, 72, 1110, 3];
+var minValue = arr[0];
+for(var i=1; i <= arr.length-1; i++) {
+if(arr[i] < minValue) minValue = arr[i];
+}
+return minValue;}
+console.log('Min item : '+min());
+//24. Write a JavaScript function to check to check whether a variable is numeric or not
+function num(){
+var a = 14;
+ if(isNaN(a)){
+ console.log('не число');
+}
+else console.log('число');}
+num();
+//25. Write a JavaScript function to calculate the sum of values in an array
+function sum(){
+var arr = [100,200];
+var sum = 0;
+for(var i=0; i <= arr.length-1; i++) {
+sum=arr[i]+sum;
+}
+return sum;}
+console.log(sum());
