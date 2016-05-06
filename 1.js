@@ -1,3 +1,4 @@
+"use strict";
 var one='13213';
 var two='223131';
 console.log(one);
@@ -7,19 +8,19 @@ console.log(two);
  }
 
 console.log(toFync(1, 4));
-  var arr=[1,2,3,4];
-function revers(arr) {
-    var length = arr.length - 1;
-    var i = 0, temp;
+  var ar=[1,2,3,4];
+function revers(ar) {
+    var length = ar.length - 1;
+    var i = 0;var temp;
     while (i < length - i) {
-        temp = arr[i];
-        arr[i] = arr[length - i];
-        arr[length - i] = temp;
+        temp = ar[i];
+        ar[i] = ar[length - i];
+        ar[length - i] = temp;
         i++;
     }
-    return arr;
+    return ar;
 }
-console.log(revers(arr));
+console.log(revers(ar));
 
   var arr=[1,2,3,4];
 function revers_2(arr) {
