@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <script src="js.js"></script>
+</head>
+<body>
+<div id="body_center">
+  <div id="to_do"> 
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 1 <br>
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 2 <br>
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 3 <br>
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 4 <br>
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 5 <br>
+    <input id="to_do_item" type="checkbox" checked="checked">to_do item 6 <br>
+    
+  </div>
+  <div id="down">
+    <input id="item" placeholder="ToDO text" type="text">
+    <input value="Добавить" id="but" type="submit"><br>
+  </div> 
+</div>
+</body>
+</html>
