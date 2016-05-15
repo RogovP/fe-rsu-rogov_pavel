@@ -1,0 +1,71 @@
+//1.
+var a;
+function Calculator(num) {
+this.num = num;
+this.multiply = function (a) {
+    console.log(num * a);
+};
+  this.add = function (b) {
+    console.log(num + b);
+  };
+  this.subtract = function (c) {
+    console.log(num - c);
+  };
+  this.divide = function (d) {
+    console.log(num / d);
+  };
+}
+var num = new Calculator(12);
+num.multiply(2);//24
+num.add(3); //15
+num.subtract(1); //11
+num.divide(2); //6
+//2.
+var Calculator = function (n) {
+  this.num = n;
+  return this;
+};
+Calculator.prototype.add = function (x) {
+  this.num = this.num + x;
+  return this;
+};
+Calculator.prototype.multiply = function (x) {
+  this.num = this.num * x;
+  return this;
+};
+Calculator.prototype.subtract = function (x) {
+  this.num = this.num - x;
+  return this;
+};
+Calculator.prototype.result = function () {
+  return this.num;
+};
+var calc = new Calculator(12);
+console.log(calc.multiply(2).add(3).result());
+//3.
+var calc = (function () {
+    return {
+        add: function (a, b, c) {
+            return a + b + c;
+        },
+        subtract: function (a, b, c, d) {
+            return a - b - c - d;
+        },
+        multiply: function (a, b, c, d) {
+            return a * b * c * d;
+        },
+        divide: function (a, b) {
+            if (b !== 0) {
+                return a / b;
+            }
+            else {
+               console.log('zero');
+                return false;
+            }
+        }
+    };
+})();
+console.log(calc.multiply(2, 2, 4, 5));
+console.log(calc.add(3, 1, 2));
+console.log(calc.subtract(1, 4, 2, 1));
+console.log(calc.divide(2, 6));
