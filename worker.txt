@@ -1,0 +1,167 @@
+function helper(arr) {
+    function mostRequent() {
+        var map = {};
+        var most = arr[0];
+        var i;
+        i = 0;
+   for (i; i < arr.length; i += 1) {
+            if (!map[arr[i]]) {
+                map[arr[i]] = 1;
+            } else {
+            ++map[arr[i]];
+                if (map[arr[i]] > map[most]) {
+                    most = arr[i];
+                }
+            }
+        }
+        return most;
+    }
+    function arr_or_not() {
+        if (toString.call(arr) === "[object Array]") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function capitalize() {
+        return (arr[0].toUpperCase() + arr.slice(1));
+    }
+    function convert_arr() {
+        return (arr.split(' '));
+    }
+    function element_position(a, b) {
+        var del_item;
+        del_item = arr.splice(a, 1);
+        arr.splice(b, 0, del_item);
+        return arr;
+    }
+    function rand_item() {
+        var rand = Math.floor(Math.random() * arr.length);
+        return arr[rand];
+    }
+    function del_item(a) {
+        var d_item = a;
+        arr.splice(d_item, 1);
+        return arr;
+    }
+    function sizeObj() {
+        var osize = 0;
+        var key;
+        for (key in arr) {
+            if (arr.hasOwnProperty(key)) {
+                osize++;
+            }
+        }
+        return osize;
+    }
+  var d = arr.length;
+    function clone_recursion(d) {
+        var arr_2;
+        arr_2 = [];
+        var i;
+        i = 0;
+        if (d > 0) {
+            arr_2.push(arr[i]);
+            i++;
+            d--;
+            return clone_recursion(d - 1);
+        } else {
+          console.log(d);
+            return arr;
+        }
+    }
+    function camel_case() {
+        return arr.replace(/\W+(.)/g, function (match, chr) {
+            return chr.toUpperCase();
+        });
+    }
+    function del_dubl() {
+        arr.sort();
+        var i;
+        i = arr.length - 1;
+for (i; i > -1; i--) {
+            if (arr[i] === arr[i + 1]) {
+                arr.splice(i, 1);
+            }
+
+        }
+        return arr;
+    }
+    function shuffle() {
+        var currentIndex = arr.length;
+        var temporaryValue;
+        var randomIndex;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = arr[currentIndex];
+            arr[currentIndex] = arr[randomIndex];
+            arr[randomIndex] = temporaryValue;
+        }
+
+        return arr;
+    }
+    function sort() {
+        function sort1(id_1, id_2) {
+            return id_1.libraryID - id_2.libraryID;
+        }
+        var Bill = {author: "Bill Gates", title: 'The Road Ahead', libraryID: 1254};
+        var Steve = {author: "Steve Jobs", title: 'Walter Isaacson', libraryID: 4264};
+        var Suze = {author: "Suzanne Collins", title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245};
+        var a = [Bill, Steve, Suze];
+        a.sort(sort1);
+        var i;
+        i = 0;
+for (i; i < a.length; i += 1) {
+console.log(a[i].author);
+        }
+    }
+    function merge_array(arr2) {
+        var result_array;
+        result_array = [];
+        var arrem;
+        arrem = {};
+        arr = arr.concat(arr2);
+        var len = arr.length;
+        while (len--) {
+            var item;
+            item = arr[len];
+            if (!arrem[item]) {
+                result_array.unshift(item);
+                arrem[item] = true;
+            }
+        }
+        return result_array;
+    }
+    return {
+        merge_array: merge_array,
+        shuffle: shuffle,
+        sort: sort,
+        del_dubl: del_dubl,
+        arr_or_not: arr_or_not,
+        mostRequent: mostRequent,
+        capitalize: capitalize,
+        convert_arr: convert_arr,
+        element_position: element_position,
+        rand_item: rand_item,
+        del_item: del_item,
+        sizeObj: sizeObj,
+        camel_case: camel_case,
+        clone_recursion: clone_recursion
+    };
+}
+var worker = helper([1,2,3,4]);
+//console.log(worker.merge_array([1,1,1,1,2]));
+//console.log(worker.shuffle());
+//console.log(worker.del_dubl());
+//console.log(worker.camel_case());
+//console.log(worker.sizeObj());
+//console.log(worker.mostRequent());
+//console.log(worker.sort());
+//console.log(worker.arr_or_not());
+//console.log(worker.clone_recursion());
+//console.log(worker.capitalize());
+//console.log(worker.convert_arr());
+//console.log(worker.element_position(2,3));
+//console.log(worker.rand_item());
+//console.log(worker.del_item(2));
