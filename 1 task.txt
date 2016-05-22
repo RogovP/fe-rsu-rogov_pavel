@@ -1,0 +1,55 @@
+function Shape() {
+    this.type = "shape";
+    this.getType = function () {
+        return this.type;
+    };
+}
+function Draw(name) {
+  this.name = name;
+}
+
+function Triangle(a, b, c) {
+     this.formyla = 'треуголника : 0.5 * b * h';
+     this.type = "triangle";
+     this.a = a;
+     this.b = b;
+     this.c = c;
+}
+
+function Square(a, b, c, d) {
+     this.formyla = 'квадрата : a * a';
+     this.type = "Square";
+     this.a = a;
+     this.b = b;
+     this.c = c;
+  this.d = d;
+}
+
+Triangle.prototype = new Shape();
+Square.prototype = new Shape();
+Draw.prototype = new Shape();
+Draw.prototype.out = function () {
+    return this.name + ' is drawn';
+};
+Square.prototype.getFormyla = function () {
+    return 'Формула для вычисления площади ' + this.formyla;
+};
+Triangle.prototype.getFormyla = function () {
+    return 'Формула для вычисления площади ' + this.formyla;
+};
+Triangle.prototype.getPerimeter = function () {
+    return this.a + this.b + this.c;
+};
+Square.prototype.getPerimeter = function () {
+  return this.a + this.b + this.c + this.d;
+};
+var n = new Draw('name');
+console.log(n.out());
+var t = new Triangle(1, 2, 3);
+console.log(t.getPerimeter());
+console.log(t.getType());
+console.log(t.getFormyla());
+var w = new Square(1, 1, 1, 1);
+console.log(w.getPerimeter());
+console.log(w.getType());
+console.log(w.getFormyla());
